@@ -4,8 +4,8 @@
 const inputRef = document.querySelector("#name-input");
 const outputRef = document.querySelector("#name-output");
 
-inputRef.addEventListener("input", (event) => {
-    outputRef.textContent = event.currentTarget.value || "Anonymous";
+inputRef.addEventListener("input", function () {
+    outputRef.textContent = inputRef.value || "Anonymous";
 });
 
 // Додатковий варіант

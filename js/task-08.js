@@ -10,8 +10,8 @@
 const FormEl = document.querySelector(".login-form");
 
 const submitForm = (event) => {
-    const emailEl = event.currentTarget.elements.email.value;
-    const passwordEl = event.currentTarget.elements.password.value;
+    const emailEl = event.target.elements.email.value;
+    const passwordEl = event.target.elements.password.value;
     const object = { emailEl, passwordEl,};   
     
     event.preventDefault();

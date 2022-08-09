@@ -14,9 +14,9 @@ function getRandomHexColor() {
 
 
 const inputEl = document.querySelector("input");
+const boxesEl = document.querySelector("#boxes");
 const buttonCreateEl = document.querySelector("[data-create]");
 const buttonDestroyEl = document.querySelector("[data-destroy]");
-const boxesEl = document.querySelector("#boxes");
 
 let divSize = 30;
 

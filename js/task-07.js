@@ -4,7 +4,7 @@ const fontSizeControlRef = document.querySelector("#font-size-control");
 const textRef = document.querySelector("#text");
 
 const newFont = (event) => {
-  textRef.setAttribute("style", `font-size: ${event.currentTarget.value}px`);
+  textRef.setAttribute("style", `font-size: ${event.target.value}px`);
 };
 
 fontSizeControlRef.addEventListener("input", newFont);
