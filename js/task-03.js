@@ -31,3 +31,12 @@ const newGallery = images => {
 };
 
 galleryRef.insertAdjacentHTML("afterbegin", newGallery(images));
+
+// варіант 2
+// for (let img of images)
+//   document
+//     .querySelector(".gallery")
+//     .insertAdjacentHTML(
+//       "beforeEnd",
+//       `<li class="gallery__item"><img src="${img.url}" alt="${img.alt}" width = 400px></li>`
+//     );
