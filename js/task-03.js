@@ -23,16 +23,16 @@ const images = [
 
 const galleryRef = document.querySelector(".gallery");
 
-const newGallery = images => {
+const createNewItemOfGallery = images => {
   return images.map((image) =>
         `<li class="gallery__item">
         <img class="gallery__image" src="${image.url}" alt="${image.alt}" width = 400px ></li>`
     ).join("");
 };
 
-galleryRef.insertAdjacentHTML("afterbegin", newGallery(images));
+galleryRef.insertAdjacentHTML("afterbegin", createNewItemOfGallery(images));
 
-// варіант 2
+// варіант 2 (Усі елементи галереї повинні додаватися в DOM за одну операцію додавання - тут не за одну?)
 // for (let img of images)
 //   document
 //     .querySelector(".gallery")

@@ -22,7 +22,9 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
-
+ul {
+  list-style: none;
+}
 .gallery__item {
   display: flex;
   margin-bottom: 30px;

@@ -9,18 +9,22 @@
 
 const FormEl = document.querySelector(".login-form");
 
-const submitForm = (event) => {
-    const emailEl = event.target.elements.email.value;
-    const passwordEl = event.target.elements.password.value;
-    const object = { emailEl, passwordEl,};   
-    
+const verifyForm = (event) => {
     event.preventDefault();
-    if (emailEl === "" || passwordEl === "") {
+
+    const email = event.target.elements.email.value;
+    const password = event.target.elements.password.value;
+    const object = { email, password};   
+    
+    if (email === "" || password === "") {
     return alert("Всі поля повинні бути заповнені");
     }
     console.log(object);
+    
     return FormEl.reset();
 };
 
-FormEl.addEventListener("submit", submitForm);
+FormEl.addEventListener("submit", verifyForm);
+
+
 

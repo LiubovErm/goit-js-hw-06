@@ -16,10 +16,10 @@ const ingredients = [
 
 const listRef = document.querySelector('#ingredients');
 
-const newList = ingredients.map(item => {
+const newItemOfList = ingredients.map(item => {
   const liRef = document.createElement('li');
   liRef.textContent = item;
   liRef.classList.add('item');
   return liRef;
 });
-listRef.append(...newList);
+listRef.append(...newItemOfList);
