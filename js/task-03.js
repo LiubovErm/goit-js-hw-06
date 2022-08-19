@@ -31,12 +31,3 @@ const createNewItemOfGallery = images => {
 };
 
 galleryRef.insertAdjacentHTML("afterbegin", createNewItemOfGallery(images));
-
-// варіант 2 (Усі елементи галереї повинні додаватися в DOM за одну операцію додавання - тут не за одну?)
-// for (let img of images)
-//   document
-//     .querySelector(".gallery")
-//     .insertAdjacentHTML(
-//       "beforeEnd",
-//       `<li class="gallery__item"><img src="${img.url}" alt="${img.alt}" width = 400px></li>`
-//     );
