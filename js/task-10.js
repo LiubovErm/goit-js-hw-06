@@ -12,31 +12,26 @@ const inputEl = document.querySelector("input");
 const boxesEl = document.querySelector("#boxes");
 const buttonCreateEl = document.querySelector("[data-create]");
 const buttonDestroyEl = document.querySelector("[data-destroy]");
-let startDivSize = 30;
 
-inputEl.value = 0;
 
-function createBoxes() {
-  const numberOfBoxes = inputEl.value;
+function createBoxes(numberOfBoxes) {
+  numberOfBoxes = inputEl.value;
   const divArray = [];
 
-  for (let i = 1; i <= numberOfBoxes; i += 1) {
+  for (let i = 0; i < numberOfBoxes; i += 1) {
     const newDivEl = document.createElement("div");
-    newDivEl.style.width = `${startDivSize}px`;
-    newDivEl.style.height = `${startDivSize}px`;
+    newDivEl.style.width = `${30 + 10 * i}px`;
+    newDivEl.style.height = `${30 + 10 * i}px`;
     newDivEl.style.backgroundColor = getRandomHexColor();
 
     divArray.push(newDivEl);
-    startDivSize += 10;
   }
   boxesEl.append(...divArray);
-  inputEl.value = "";
 };
 
 function destroyBoxes () {
-  boxesEl.replaceChildren();   // boxesEl.innerHTML = "";
-  startDivSize = 30;        
-  // кастиль?
+  boxesEl.innerHTML = '';
+  inputEl.value = "";
 };
 
 function getRandomHexColor() {
@@ -45,4 +40,8 @@ function getRandomHexColor() {
 
 buttonCreateEl.addEventListener("click", createBoxes);
 buttonDestroyEl.addEventListener("click", destroyBoxes)
+
+
+
+
 

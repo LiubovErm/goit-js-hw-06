@@ -1,5 +1,6 @@
 // Напиши скрипт, який під час набору тексту в інпуті input#name-input (подія input), підставляє його поточне значення в span#name-output. Якщо інпут порожній, у спані повинен відображатися рядок "Anonymous".
 
+
 const inputRef = document.querySelector("#name-input");
 const outputRef = document.querySelector("#name-output");
 
@@ -8,6 +9,9 @@ function createName() {
 }
 
 inputRef.addEventListener("input", createName);
+
+
+
 
 //Варіант 2
 
@@ -20,6 +24,9 @@ inputRef.addEventListener("input", createName);
 //       : (outputRef.textContent = event.currentTarget.value);
 //   };
 //   inputRef.addEventListener("input", createInputName);
+
+
+
 
 //Варіант 3
 

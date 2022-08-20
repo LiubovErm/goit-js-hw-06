@@ -7,6 +7,7 @@
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 
 
+
 const FormEl = document.querySelector(".login-form");
 
 const verifyForm = (event) => {
@@ -21,7 +22,7 @@ const verifyForm = (event) => {
     }
     console.log(object);
     
-    return FormEl.reset();
+    FormEl.reset();
 };
 
 FormEl.addEventListener("submit", verifyForm);
